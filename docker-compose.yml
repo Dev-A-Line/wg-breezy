@@ -3,11 +3,11 @@ volumes:
   etc_wireguard:
 
 services:
-  wg-easy:
+  wg-breezy:
     environment:
       # Change Language:
       # (Supports: en, ru, tr, no, pl, fr, de)
-      - LANG=de
+      - LANG=ru
       # ⚠️ Required:
       # Change this to your host's public address
       - WG_HOST=raspberrypi.local
@@ -25,8 +25,8 @@ services:
       # - WG_PRE_DOWN=echo "Pre Down" > /etc/wireguard/pre-down.txt
       # - WG_POST_DOWN=echo "Post Down" > /etc/wireguard/post-down.txt
 
-    image: ghcr.io/wg-easy/wg-easy
-    container_name: wg-easy
+    image: devaline/wg-breezy/wg-breezy
+    container_name: wg-breezy
     volumes:
       - etc_wireguard:/etc/wireguard
     ports:
